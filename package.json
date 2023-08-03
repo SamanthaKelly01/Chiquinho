@@ -5,7 +5,7 @@
   "main": "index.js",
   "config": {
     "port": 3000
-  },  
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "set PORT=%npm_package_config_port% && nodemon App.js"
@@ -14,7 +14,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^7.4.1",
+    "mongoose": "^7.4.1"
+  },
+  "devDependencies": {
     "nodemon": "^3.0.1"
   }
 }
