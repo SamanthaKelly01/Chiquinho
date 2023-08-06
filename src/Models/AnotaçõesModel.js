@@ -3,7 +3,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const AnotaçãoSchema = new Schema({
-    título : String,
+    título : {
+        type: String,
+        unique: true,
+    },
     conteúdo: String,
     id_usuário: {
         type: Schema.Types.ObjectId,
