@@ -1,8 +1,20 @@
 const express = require("express");
 const rotas = require("./src/Routes")
 const app = express();
-
+const cors = require("cors")
 const port = process.env.PORT || 8000; // Obtém a porta configurada das variáveis de ambiente ou usa a porta padrão 8000
+
+
+app.use(rotas);
+app.use("*", (req,res) => {
+    res.status(404).json({message : `Rota '${req.baseUrl}' não encontrada.`})
+})
+app.use(cors());
+app.use(express.urlencoded({extended: true}));
+app.listen(port, () => {
+    console.log(`Servidor Rodando = Chiquinho feliz! Acesse http://localhost:${port}`);
+});
+
 
 app.get("", (req, res) => {
     return res.json({
@@ -26,14 +38,5 @@ app.get("/*", (req, res) => {
     `;
     return res.status(404).send(notFoundMessage);
 });
-
-app.use(rotas);
-
-app.listen(port, () => {
-    console.log(`Servidor Rodando = Chiquinho feliz! Acesse http://localhost:${port}`);
-});
-
-
-
 
 module.exports = app;
