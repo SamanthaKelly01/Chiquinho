@@ -16,27 +16,27 @@ app.listen(port, () => {
 });
 
 
-app.get("", (req, res) => {
-    return res.json({
-        message: "Geral"
-    });
-});
+// app.get("", (req, res) => {
+//     return res.json({
+//         message: "Geral"
+//     });
+// });
 
-app.get("/cadastro", (req, res) => {
-    return res.json({
-        message: "Cadastro"
-    });
-});
+// app.get("/cadastro", (req, res) => {
+//     return res.json({
+//         message: "Cadastro"
+//     });
+// });
 
-app.get("/*", (req, res) => {
-    const notFoundMessage = `
-        <html>
-        <body>
-            <p>Página não encontrada. Clique <a href="http://localhost:${port}">aqui</a> para voltar à página principal.</p>
-        </body>
-        </html>
-    `;
-    return res.status(404).send(notFoundMessage);
-});
+// app.get("/*", (req, res) => {
+//     const notFoundMessage = `
+//         <html>
+//         <body>
+//             <p>Página não encontrada. Clique <a href="http://localhost:${port}">aqui</a> para voltar à página principal.</p>
+//         </body>
+//         </html>
+//     `;
+//     return res.status(404).send(notFoundMessage);
+// });
 
 module.exports = app;
