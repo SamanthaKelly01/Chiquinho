@@ -12,7 +12,7 @@ const UsuarioSchema = new Schema({
         unique: true,
         lowercase: true,
     },
-    senha : String
+    senha : {type: String}
 })
 
 const UsuarioModel = mongoose.model('usuarios', UsuarioSchema);

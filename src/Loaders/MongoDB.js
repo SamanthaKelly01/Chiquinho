@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 async function startDB(){
     try {
-        await mongoose.connect('mongodb+srv://sam:JgbIJ67X2ABQKk2q@sistemawebchiquinho.ygnrb9j.mongodb.net/');
+        await mongoose.connect('mongodb+srv://Sam:pamonha123@chiquinho.thwidoo.mongodb.net/?retryWrites=true&w=majority');
         console.log("Conexão com o banco de dados estabelecida.");
     } catch (error) {
         console.error("Erro ao conectar ao banco de dados:", error);
@@ -11,3 +11,4 @@ async function startDB(){
 
 module.exports = startDB;
 
+//pamonha123

@@ -3,6 +3,7 @@ const { validateRequest } = require("zod-express-middleware");
 const mongoose = require("mongoose");
 
 const create = validateRequest({
+    
     body: z.object({
         nome: z.string({ required_error: "Insira um nome." }),
         email: z.string({ required_error: "Insira um email." }).email("O email é inválido"),
