@@ -13,6 +13,7 @@ app.use("*", (req, res) => {
     res.status(404).json({ message: `Rota '${req.baseUrl}' não encontrada.` })
 })
 
+module.exports = app;
 // app.get("", (req, res) => {
 //     return res.json({
 //         message: "Geral"
@@ -36,4 +37,3 @@ app.use("*", (req, res) => {
 //     return res.status(404).send(notFoundMessage);
 // });
 
-module.exports = app;

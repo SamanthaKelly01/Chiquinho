@@ -1,6 +1,6 @@
 const Loaders = require("./src/Loaders/index");
 const app = require("./App")
-console.log("oi")
+
 Loaders.start();
 
 app.listen(3000, () => {

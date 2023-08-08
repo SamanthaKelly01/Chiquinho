@@ -1,14 +1,12 @@
+
 {
   "name": "chiquinho",
   "version": "1.0.0",
   "description": "Sistema de acesso a anotações de estudos",
   "main": "index.js",
-  "config": {
-    "port": 3000
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "set PORT=%npm_package_config_port% && nodemon App.js"
+    "test": "echo 'Error: no test specified' && exit 1",
+    "start": "nodemon src/index.js"
   },
   "author": "Samantha Sena",
   "license": "ISC",
